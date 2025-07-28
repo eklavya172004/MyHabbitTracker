@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f0f2f5; /* A light gray background for the whole page */
+  color: #1a202c;
+}
+
+.dark body {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+/* Styles for react-calendar-heatmap */
+.react-calendar-heatmap .color-empty {
+  fill: #ebedf0;
+}
+.dark .react-calendar-heatmap .color-empty {
+  fill: #2d333b;
+}
+
+.react-calendar-heatmap .color-scale-1 {
+  fill: #9be9a8;
+}
+.react-calendar-heatmap .color-scale-2 {
+  fill: #40c463;
+}
+.react-calendar-heatmap .color-scale-3 {
+  fill: #30a14e;
+}
+.react-calendar-heatmap .color-scale-4 {
+  fill: #216e39;
+}
+
+.react-calendar-heatmap rect:hover {
+  stroke: #555;
+  stroke-width: 1px;
 }
