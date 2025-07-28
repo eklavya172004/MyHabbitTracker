@@ -81,7 +81,7 @@ yarn install
 3. Set Up Supabase
 Create a New Project: Go to your Supabase dashboard and create a new project.
 
-Create the Database Table: Go to the SQL Editor in your new project and run the SQL script from the Supabase Table Setup Guide to create the daily_tasks table and enable Row Level Security (RLS).
+Create the Database Table: Go to the SQL Editor in your new project and run the SQL script provided in the project to create the daily_tasks table and enable Row Level Security (RLS). (You should create a file like supabase_setup.sql in your project to store this script).
 
 Disable Email Confirmation (Optional): If you don't want users to confirm their email upon signup, go to Authentication -> Settings and toggle off "Confirm email".
 
@@ -90,7 +90,7 @@ Find your Supabase API keys in your project's Settings -> API.
 
 Create a new file named .env.local in the root of your project.
 
-Copy the contents of .env.example (if provided) or add the following variables to your new .env.local file, replacing the placeholder values with your actual Supabase keys:
+Add the following variables to your new .env.local file, replacing the placeholder values with your actual Supabase keys:
 
 NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_PROJECT_URL
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR_SUPABASE_ANON_KEY
