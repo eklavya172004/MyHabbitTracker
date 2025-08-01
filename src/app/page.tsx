@@ -8,6 +8,7 @@ import Auth from '@/components/Auth'; // Import the new Auth component
 import { Sun, Moon, LogOut } from 'lucide-react';
 import { supabase } from '@/lib/supabaseClient';
 import { User } from '@supabase/supabase-js';
+import SixMonthCalendar from '@/components/SixMonthCalender';
 
 type TaskId = 'gym' | 'project' | 'dsa';
 
@@ -201,9 +202,11 @@ export default function Home() {
               <LogOut className="w-6 h-6" />
             </button>
           </div>
-        </header>
+        </header> 
 
         <main>
+            <SixMonthCalendar/>
+
           <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             {tasks.map((task) => (
               task.id === 'leetcode' ? (
